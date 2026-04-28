@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+
+min-height: 100vh;
+background-attachment: fixed;
+
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(255,105,180,0.3) 0%,   /* atas (tipis) */
+      rgba(255,105,180,0.8) 60%,  /* tengah */
+      #ff69b4 100%               /* bawah full pink */
+    ),
+    url('bg.jpeg');
+
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.container {
+    width: 100%;
+  max-width: 400px;
+  padding: 0 10px; 
+  position: relative;
+  z-index: 1;
+}
+
+/* card */
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#total {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff1493;
+}
+
+/* button */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #ff1493;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* history */
+.history-title {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.history-item {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: black;
+  font-size: 14px;
+}
+#history {
+  margin-top: 10px;
+  border: 2px dashed white;
+  padding: 10px;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999; /* 🔥 INI KUNCI */
+}
+
+.hidden {
+  display: none;
+}
+.modal-content {
+  position: relative;
+
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-height: 90vh;   /* 🔥 penting */
+  overflow-y: auto;   /* 🔥 biar bisa scroll */
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding-top: 10px;
+}
+
+.actions button {
+  flex: 1;
+}
+/* Judul biar lebih lucu */
+h2 {
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* angka total biar bold & aesthetic */
+#total {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ff1493;
+}

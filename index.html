@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Okhee Savings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <input type="date" id="datePicker" />
+
+  <div class="card">
+    <h2>Total Tabungan Okhee😋</h2>
+    <p id="total">Rp 0</p>
+    <button onclick="openMenu()">Edit</button>
+  </div>
+
+  <button onclick="exportData()">Export Data</button>
+<button onclick="importData()">Import Data</button>
+
+  <h3 class="history-title">Riwayat</h3>
+  <div id="history"></div>
+
+</div>
+
+<!-- MENU -->
+<div id="menuModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Mau ngapain today?</h3>
+    <button onclick="openForm('tambah')">➕ Tambah Saldo</button>
+    <button onclick="openForm('kurang')">➖ Kurang Saldo</button>
+    <button onclick="closeMenu()">Batal</button>
+  </div>
+</div>
+
+<!-- FORM -->
+<div id="formModal" class="modal hidden">
+  <div class="modal-content">
+    <h3 id="formTitle"></h3>
+
+    <input type="number" id="amount" placeholder="Jumlah">
+    <input type="text" id="reason" placeholder="Alasan">
+
+    <div class="actions">
+      <button onclick="closeForm()">Batal</button>
+      <button onclick="saveData()">Simpan</button>
+    </div>
+  </div>
+</div>
+
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
